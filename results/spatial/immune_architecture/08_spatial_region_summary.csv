@@ -1,0 +1,23 @@
+region_cluster,library_id,tissue_level_immune_class,total_immune,dominant_cell_type
+9,BEME_346,Immune-high,96.11404,CD8 T
+0,BEME_346,Immune-high,93.843414,CD8 T
+6,BEME_346,Immune-moderate-high,64.28651,CD8 T
+1,BEME_346,Immune-moderate-low,54.467182,CD4 T
+8,BEME_346,Immune-moderate-low,45.566067,CD8 T
+4,BEME_346,Immune-low,38.69574,CD8 T
+2,BEME_346,Immune-low,24.591093,CD4 T
+3,BEME_346,Immune-low,15.260765,CD8 T
+5,BEME_346,Immune-poor,7.338196,CD4 T
+7,BEME_346,Immune-poor,1.4665425,CD8 T
+11,BEME_355G,Immune-high,208.19379,CD8 T
+3,BEME_355G,Immune-moderate-high,130.50667,CD4 T
+10,BEME_355G,Immune-high,119.6919,CD8 T
+2,BEME_355G,Immune-moderate-low,78.33598,CD8 T
+9,BEME_355G,Immune-moderate,75.91567,CD8 T
+4,BEME_355G,Immune-moderate-low,51.90031,CD4 T
+1,BEME_355G,Immune-low,43.511616,CD8 T
+7,BEME_355G,Immune-low,25.933357,CD4 T
+5,BEME_355G,Immune-low,20.65237,CD8 T
+0,BEME_355G,Immune-poor,4.965096,CD8 T
+8,BEME_355G,Immune-poor,4.192695,CD4 T
+6,BEME_355G,Immune-poor,1.6290659,CD8 T

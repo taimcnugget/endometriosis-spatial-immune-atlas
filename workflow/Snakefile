@@ -1,14 +1,18 @@
 configfile: "config/config.yaml"
 
-include: "rules/data_collection.smk"
-include: "rules/qc.smk"
-include: "rules/integration.smk"
-include: "rules/total_clustering.smk"
-include: "rules/immune_subset.smk"
-include: "rules/immunosenescence.smk"
-include: "rules/spatial_transcriptomics.smk"
-include: "rules/cellular_communication.smk"
+from pathlib import Path
+
+BASE = Path(config["paths"]["base"])
+
+def p(key):
+    return str(BASE / config["paths"][key])
+
+include: "rules/01_data_collection.smk"
+include: "rules/02_qc.smk"
+include: "rules/03_integration.smk"
+include: "rules/04_total_clustering.smk"
+include: "rules/05_immune_annotation.smk"
 
 rule all:
     input:
-        config["paths"]["figures"] 
+        p("immune_annotation_object")

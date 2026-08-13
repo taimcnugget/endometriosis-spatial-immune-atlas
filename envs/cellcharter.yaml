@@ -1,0 +1,14 @@
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - numpy<2
+  - pandas<3
+  - anndata
+  - scanpy
+  - squidpy
+  - pytorch
+  - lightning
+  - scikit-learn
+  - pip
+  - pip:
+      - cellcharter

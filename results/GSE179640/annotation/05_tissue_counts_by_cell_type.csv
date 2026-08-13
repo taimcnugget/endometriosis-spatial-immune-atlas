@@ -1,0 +1,14 @@
+immune_cell_type,Ctrl,EuE,EcP,EcO
+Classical Monocytes,311,983,1999,187
+Non-Classical Monocytes,66,187,251,44
+Tissue Resident Macrophages,454,962,1199,1037
+cDC1,18,53,58,36
+cDC2,266,402,1081,128
+pDC,13,76,69,48
+CD16+ NK cells,241,521,1319,249
+CD16- NK cells,646,2277,1008,517
+CD4 T cells,357,1446,1858,747
+CD8 T cells,50,198,69,47
+Tregs,27,208,223,38
+γδ T cells,392,1450,1903,844
+B cells,133,550,495,141

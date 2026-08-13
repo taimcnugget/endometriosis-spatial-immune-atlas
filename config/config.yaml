@@ -1,50 +1,79 @@
-# -- PATHS
 paths:
   base: "/content/drive/MyDrive/endo-immune-atlas"
   raw_data: "data/raw/GSE179640_Supp"
-  raw_object:     "data/processed/GSE179640_raw.h5ad"
-  qc_object:      "data/processed/GSE179640_qc.h5ad"
-  integration_object:   "data/processed/GSE179640_integration.h5ad"
-  cluster_object: "data/processed/GSE179640_total_clustering.h5ad"
-  immune_object:  "data/processed/GSE179640_immune_subset.h5ad"
-  sen_object:     "data/processed/GSE179640_senescence.h5ad"
-  spatial_object: "data/processed/GSE179640_spatial.h5ad"
-  results:        "results"
-  preprocess_figs: "results/preprocessing"
-  figures:        "results/figures"
-  logs:           "logs"
+  raw_object: "data/interim/GSE179640/01_raw.h5ad"
+  qc_object: "data/interim/GSE179640/02_qc.h5ad"
+  integration_object: "data/interim/GSE179640/03_integration.h5ad"
+  cluster_object: "data/interim/GSE179640/04_total_clustering.h5ad"
+  cluster_markers: "results/GSE179640/clustering/04_cluster_markers.csv"
+  cluster_marker_plot: "figures/GSE179640/clustering/04_cluster_marker_dotplot.png"
+  immune_annotation_object: "data/interim/GSE179640/immune_annotated.h5ad"
+  immunosenescence_object: "data/interim/GSE179640/immunosenescence.h5ad"
+  spatial_346_raw: "data/interim/spatial/BEME_346_raw.h5ad"
+  spatial_355g_raw: "data/interim/spatial/BEME_355G_raw.h5ad"
+  spatial_346_c2l: "data/interim/spatial/BEME_346_cell2location.h5ad"
+  spatial_355g_c2l: "data/interim/spatial/BEME_355G_cell2location.h5ad"
+  spatial_architecture_done: "results/spatial/architecture/.complete"
+  spatial_immunosenescence_done: "results/spatial/immunosenescence/.complete"
+  spatial_niche_object: "data/interim/spatial/10_immune_niches.h5ad"
+  single_cell_ccc_done: "results/single_cell/cell_communication/.complete"
+  spatial_niche_ccc_done: "results/spatial/niche_ccc/.complete"
+  logs: "logs"
 
-# -- DATASET 
 dataset:
   accession: "GSE179640"
-  spatial_samples:
-    - "GSM6690475"
-    - "GSM6690476"
-  exclude:
-    - "EOR" # organoids
-    - "EcPA" # ectopic adjacent
+  exclude: ["EOR", "EcPA"]
 
-# -- QC
 qc:
   min_genes: 500
-  min_UMI: 1000
-  max_UMI: 100000
+  min_counts: 1000
+  max_counts: 100000
   mt_threshold: 25
   min_cells: 3
 
-# -- INTEGRATION
-integration: 
+integration:
+  target_sum: 10000
   n_top_genes: 2000
   n_pcs: 50
   n_neighbors: 15
+  random_state: 0
 
-# -- CLUSTERING
 total_clustering:
   resolution: 0.01
   logfoldthreshold: 1.5
   padj_threshold: 0.05
+  random_state: 0
+  cluster_map:
+    "0": "Myeloid"
+    "1": "Lymphoid"
+    "2": "Stromal"
+    "3": "Epithelial"
+    "4": "Endothelial"
 
-# -- IMMUNE SUBSET
-# -- IMMUNOSENESCENCE
-# -- SPATIAL
-# -- COMMUNICATION
+immune_annotation:
+  immune_labels: ["Myeloid", "Lymphoid"]
+  # Replace these values only if the final notebook-5 mapping differs.
+  resolution: 0.50
+
+immunosenescence:
+  quantile: 0.75
+
+spatial_niches:
+  n_clusters: 7
+  n_layers: 3
+  n_neighbors: 6
+  random_state: 3
+
+single_cell_ccc:
+  min_cells: 20
+  n_perms: 1000
+  p_value_threshold: 0.05
+  lr_means_threshold: 0.5
+  top_n: 10
+
+spatial_ccc:
+  min_spots: 20
+  n_perms: 1000
+  p_value_threshold: 0.005
+  top_n: 10
+  random_state: 3

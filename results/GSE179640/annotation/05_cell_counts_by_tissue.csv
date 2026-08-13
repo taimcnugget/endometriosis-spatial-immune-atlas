@@ -1,0 +1,5 @@
+tissue_type,Classical Monocytes,Non-Classical Monocytes,Tissue Resident Macrophages,cDC1,cDC2,pDC,CD16+ NK cells,CD16- NK cells,CD4 T cells,CD8 T cells,Tregs,γδ T cells,B cells
+Ctrl,311,66,454,18,266,13,241,646,357,50,27,392,133
+EuE,983,187,962,53,402,76,521,2277,1446,198,208,1450,550
+EcO,187,44,1037,36,128,48,249,517,747,47,38,844,141
+EcP,1999,251,1199,58,1081,69,1319,1008,1858,69,223,1903,495

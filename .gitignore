@@ -1,72 +1,61 @@
-#  Raw data 
-# Never commit raw GEO downloads -- too large, reproducible from source
-data/raw/
-data/processed/
+# -------------------------
+# Data
+# -------------------------
+data/*
+!data/.gitkeep
 
-#  Large intermediate files 
+# Large single-cell / spatial files
 *.h5ad
 *.h5
+*.hdf5
 *.loom
-*.mtx
-*.mtx.gz
-*.tsv.gz
-*.csv.gz
 
-#  Snakemake internals 
-.snakemake/
-*.snakemake.log
-
-#  Logs 
-logs/
-
-#  Results & figures 
-# Keep this commented out if you WANT to push final figures to GitHub
-# Uncomment if figures are too large or generated fresh each run
-# results/
-
-#  Python 
+# -------------------------
+# Python
+# -------------------------
 __pycache__/
 *.py[cod]
-*.pyo
-.Python
 *.egg-info/
-dist/
-build/
-.eggs/
 
-#  Jupyter / Colab notebooks checkpoints 
+# -------------------------
+# Jupyter
+# -------------------------
 .ipynb_checkpoints/
-*/.ipynb_checkpoints/
 
-#  Conda / virtual environments 
-.env
-.venv
-env/
+# -------------------------
+# Snakemake
+# -------------------------
+.snakemake/
+
+# -------------------------
+# Environments
+# -------------------------
+.venv/
 venv/
-*.conda
+env/
 
-#  cell2location / PyTorch model checkpoints 
-*.pt
-*.ckpt
-lightning_logs/
-cell2location_model/
+# Keep environment specification files
+!envs/*.yaml
+!envs/*.yml
 
-#  Scrublet cache 
-*_scrublet_cache.pkl
-*.pkl
-
-#  macOS junk 
+# -------------------------
+# OS / editor files
+# -------------------------
 .DS_Store
-.AppleDouble
-.LSOverride
-
-#  Google Drive / Colab artifacts 
-*.gdoc
-*.gsheet
-drive/
-
-#  IDE 
+Thumbs.db
 .vscode/
 .idea/
-*.swp
-*.swo
+
+# -------------------------
+# Temporary files
+# -------------------------
+*.tmp
+*.temp
+*.log
+*~
+
+# -------------------------
+# Trained models
+# -------------------------
+models/
+
