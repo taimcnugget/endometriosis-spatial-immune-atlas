@@ -1,4 +1,4 @@
-# endo-immune-atlas
+# endometriosis-spatial-immune-atlas
 
 A reproducible Snakemake pipeline for spatial immune and immunosenescence profiling in endometriosis using public single-cell and spatial transcriptomics data.
 
