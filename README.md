@@ -29,50 +29,51 @@ Endometriosis affects approximately 1 in 10 women of reproductive age and is cha
 ---
 
 ## Pipeline Overview
-
 This project is built as a modular Snakemake pipeline. Each analysis step is an independent rule with defined inputs, outputs, and parameters controlled via `config/config.yaml`.
 
 ```
-endo-immune-atlas/
- config/
-    config.yaml
- workflow/
-    Snakefile
-    rules/
-        qc.smk
-        integration.smk
-        total_clustering.smk
-        subset_immune_cells.smk
-        immunosenescence.smk
-        spatial_transcriptomics.smk
-        neighborhood_analysis.smk
-        niche_discovery.smk
-        cell_cell_communication.smk
-        network_analysis.smk
- scripts/
-    01_endo_immune_atlas_data_collection.py
-    02_endo_immune_atlas_qc.py
-    03_endo_immune_atlas_integration.py
-    04_endo_immune_atlas_total_clustering.py
-    05_endo_immune_atlas_subset_clustering.py
-    06_endo_immune_atlas_immunosenescence.py
-    07_endo_immune_atlas_spatial_transcriptomics.py
-    08_endo_immune_atlas_spatial_neighborhood_analysis.py
-    09_endo_immune_atlas_immunosenescence_dysfunction.py
-    10_endo_immune_atlas_niche_discovery.py
-    11_endo_immune_atlas_cellular_communication.py
-    12_endo_immune_atlas_network_analysis.py
- notebooks/          # exploratory analysis only
- data/
-    raw/            # GEO downloads not tracked by git
-    processed/      # pipeline intermediates not tracked by git
- results/
-    preprocessing/  # QC plots, UMAPs, cluster markers
-    figures/        # final analysis figures
- envs/
-    endo_env.yaml
- .gitignore
- README.md
+endometriosis-spatial-immune-atlas/
+├── config/
+│   └── config.yaml
+│
+├── workflow/
+│   ├── Snakefile
+│   └── rules/
+│       ├── 00_spatial_collection.smk
+│       ├── 01_data_collection.smk
+│       ├── 02_qc.smk
+│       ├── 03_integration.smk
+│       ├── 04_total_clustering.smk
+│       └── 05_immune_annotation.smk
+│
+├── scripts/
+│   ├── 01_data_collection.py
+│   ├── 02_qc.py
+│   ├── 03_integration.py
+│   ├── 04_total_clustering.py
+│   └── 05_immune_annotation.py
+│
+├── notebooks/
+│   └── 00–12 analysis notebooks
+│
+├── data/
+│   ├── raw/                 # GEO downloads; not tracked by Git
+│   └── processed/           # intermediate files; not tracked by Git
+│
+├── results/
+├── figures/
+│
+├── models/
+│
+├── .gitignore
+│
+├── envs/
+│   └── endo_env.yaml
+|
+├── .gitignore
+|
+├── RESULTS.md               # detailed biological results and interpretation
+└── README.md                # project overview and reproducibility 
 ```
 
 ### DAG
@@ -101,7 +102,6 @@ flowchart TD
 
     subgraph systems["Systems Biology"]
         ccc[cell_cell_communication]
-        network[network_analysis]
     end
 
     subgraph outputs["Outputs"]
@@ -117,7 +117,6 @@ flowchart TD
     spatial_map --> neighborhood
     neighborhood --> niche
     niche --> ccc
-    ccc --> network
 
     qc --> preprocess_figures
     integration --> preprocess_figures
@@ -129,7 +128,6 @@ flowchart TD
     neighborhood --> final_figures
     niche --> final_figures
     ccc --> final_figures
-    network --> final_figures
 
     classDef dataset fill:#D3D3D3,stroke:#000,color:#000;
     classDef scrna fill:#BFD7ED,stroke:#000,color:#000;
@@ -142,7 +140,7 @@ flowchart TD
     class qc,integration,cluster,subset scrna;
     class immuno state;
     class spatial_map,neighborhood,niche spatial;
-    class ccc,network systems;
+    class ccc systems; 
     class preprocess_figures,final_figures output;
 ```
 
@@ -184,43 +182,27 @@ conda activate endo_pipeline
 # GSM6690476: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM6690476
 # place downloaded files in data/raw/ following the structure in config/config.yaml
 
-# dry run to verify pipeline
-snakemake -n
+# dry run to verify the Snakemake workflow
+snakemake -s workflow/Snakefile -n
 
-# run the full pipeline
-snakemake --cores 4
+# run the automated core workflow
+snakemake -s workflow/Snakefile --cores 4
 ```
+
+The repository also includes draft Snakemake rules and configuration entries for downstream analyses planned for v2. These are retained as workflow scaffolding but are not included in the current executable v1 pipeline.
 
 ---
 
 ## Status
-
-Completed:
-- Single-cell immune atlas construction
-- Immune cell annotation and lineage characterization
-- Immunosenescence and dysfunction scoring
-- Cell-state co-occurrence analysis
-- Differential expression analysis of senescent immune populations
-- Spatial deconvolution of endometriosis lesions
-- Identification of spatially organized immune microenvironments
-- Immunosenescence and dysfunction score mapping to endometriosis lesions
-- Niche discovery
-
-
-In progress:
-- Cell-cell communication inference
-
-
-
-Next steps:
-- Network characterization of senescent and dysfunctional tissue ecosystems
+v1 of the project is complete! The core single-cell workflow, from data download through immune cell subsetting, can be run via Snakemake. The numbered notebooks contain the full downstream analysis and can be explored for additional details. 
 
 ---
 
 ## Future Directions
+For v2 of this project I would like to:
 
-*To be completed after analysis. This section will document follow-up experiments and biological questions arising from the results.*
-
+- Investigate network characterization of senescent and dysfunctional tissue ecosystems.
+- Extend the Snakemake workflow to cover the downstream analyses currently contained in notebooks.
 ---
 
 ## Author
