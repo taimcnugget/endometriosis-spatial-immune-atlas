@@ -150,18 +150,19 @@ flowchart TD
 
 | Notebook | Tools | Description |
 |---|---|---|
-| 01_data_collection | AnnData | Data loading, AnnData generation, sample labeling |
-| 02_qc | Scanpy | Quality control, cell filtering, doublet removal |
-| 03_integration | Scanpy, harmonypy | Dataset integration, batch correction, PCA |
-| 04_total_clustering | Scanpy | Broad cell type annotation |
-| 05_subset_clustering | Scanpy, CellTypist | Immune subsetting, fine-resolution clustering/annotation |
-| 06_immunosenescence | Scanpy | Senescence and dysfunction scoring, cell state classification, DEG analysis|
-| 07_spatial_transcriptomics | cell2location | Spatial deconvolution, spatial immune mapping within lesions |
-| 08_spatial_neighborhood_analysis | Squidpy | Identification of spatially enriched immune neighborhoods |
+| 00_spatial_data_collection | AnnData | Data loading, AnnData generation, sample labeling |
+| 01_sc_data_collection | AnnData | Data loading, AnnData generation, sample labeling |
+| 02_sc_quality_control | Scanpy | Quality control, cell filtering, doublet removal |
+| 03_sc_integration | Scanpy, harmonypy | Dataset integration, batch correction, PCA |
+| 04_sc_clustering | Scanpy | Broad cell type annotation |
+| 05_sc_immmune_annotation | Scanpy, CellTypist | Immune subsetting, fine-resolution clustering/annotation |
+| 06_sc_immunosenescence | Scanpy | Senescence and dysfunction scoring, cell state classification, DEG analysis|
+| 07_spatial_cell2location | cell2location | Spatial deconvolution, spatial immune mapping within lesions |
+| 08_spatial_immune_architecture | Squidpy | Identification of spatially enriched immune neighborhoods |
 | 09_spatial_immunosenescence | Squidpy | Identification of spatially enriched cellular neighborhoods and cell-state co-localization patterns |
-| 10_niche_discovery | CellCharter | Discovery/characterization of multicellular tissue niches |
-| 11_cellular_communication | LIANA+ | Ligand-receptor inference between neighboring cell populations and tissue niches |
-| 12_network_analysis | NetworkX, igraph, pandas | Construction and analysis of cell-state interaction networks to identify key signaling hubs and microenvironmental programs |
+| 10_spatial_niche_discovery | CellCharter | Discovery/characterization of multicellular tissue niches |
+| 11_sc_ccc | LIANA+ | Ligand-receptor inference between neighboring cell populations and tissue niches |
+| 12_spatial_niche_ccc | Squidpy | Ligand-receptor inference between tissue niches |
 
 ---
 
