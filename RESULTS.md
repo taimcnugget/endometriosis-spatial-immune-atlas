@@ -171,7 +171,7 @@ When senescent and dysfunctional immune cells are compared with the broader immu
 
 <p align="center">
   <img src="/figures/GSE179640/cell_communication/all_immune/all_immune_cross_tissue_enrichment.png" width="42%">
-  <img src="/figures/GSE179640/cell_communication/sen_dys/sen_dys_cross_tissue_enrichment.png" width="48%">
+  <img src="/figures/GSE179640/cell_communication/sen_dys/sen_dys_cross_tissue_enrichment.png" width="42%">
 </p>
 
 ## 9. Spatial Organization
