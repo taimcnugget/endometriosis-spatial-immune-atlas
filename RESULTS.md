@@ -179,11 +179,19 @@ When senescent and dysfunctional immune cells are compared with the broader immu
 ### Immune Cell States
 Next, I wanted to explore the immune architecture within endometrial lesions. In this analysis, I included 2 peritoneal lesions from two different patients. First, immune states were mapped within the tissues based on immune abundance per spot. Then the dominate cell type of each spot was determined via genetic signatures. Then overall immune abundance per spot was mapped onto the tissues.
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="figures/spatial/immune_architecture/08_BEME_346_spatial_architecture.png" width="48%"><br>
+      <b>A. BEME346</b>
+    </td>
+    <td align="center">
+      <img src="figures/spatial/immune_architecture/08_BEME_355G_spatial_architecture.png" width="48%"><br>
+      <b>B. BEME355G</b>
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="figures/spatial/immune_architecture/08_BEME_346_spatial_architecture.png" width="48%">
-  <img src="figures/spatial/immune_architecture/08_BEME_355G_spatial_architecture.png" width="48%">
-</p>
 
 <p align="center">
   <img src="figures/spatial/immune_architecture/08_lesion_immune_abundance_raincloud.png" width="800">
