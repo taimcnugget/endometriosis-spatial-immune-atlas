@@ -148,16 +148,9 @@ Stratifying immune cells by senescence/dysfunction state revealed tissue-specifi
 In EuE, the SEN/DYS TRMs show strikingly stronger predicted **SPP1-associated signaling** than Other TRMs, including SPP1→CD44 and multiple integrin receptor combinations, suggesting dysfunctional macrophage signaling, as mentioned previously. Additionally, EcP also showed a substantial SPP1 program, although the contrast between states is less dramatic. Meanwhile, Ctrl has a very different TRM landscape, with prominent APOE, HLA-associated, and B2M-associated interactions. EcO is different again, with APOE/B2M-associated signaling prominent in the displayed Other population. 
 
 <p align="center">
-  <img src="/figures/GSE179640/cell_communication/sen_dys/Ctrl_sen_dys_TRM_dotplot.png" width="400">
-</p> <p align="center">
-  <img src="/figures/GSE179640/cell_communication/sen_dys/EuE_sen_dys_TRM_dotplot.png" width="400">
-</p> 
-
-<p align="center">
-  <img src="/figures/GSE179640/cell_communication/sen_dys/EcO_sen_dys_TRM_dotplot.png" width="400">
-</p> <p align="center">
-  <img src="/figures/GSE179640/cell_communication/sen_dys/EcP_sen_dys_TRM_dotplot.png" width="400">
-</p> 
+  <img src="/figures/GSE179640/cell_communication/sen_dys/EcO_sen_dys_TRM_dotplot.png" width="48%">
+  <img src="/figures/GSE179640/cell_communication/sen_dys/EcP_sen_dys_TRM_dotplot.png" width="48%">
+</p>
 
 **Monocytes**
 
@@ -171,11 +164,8 @@ In EuE and Ctrl especially, S100A8/9→ITGB2, CD68, CD36, and TLR4 interactions 
 When senescent and dysfunctional immune cells are compared with the broader immune-cell population, many of the same core immune and cell-surface processes remain enriched. However, SEN/DYS-associated ligand–receptor genes show prominent enrichment for response-to-stimulus pathways across the endometrial tissues, with greater gene overlap than in control tissue. This suggests that senescent and dysfunctional immune cells may participate in a communication state characterized by altered responsiveness to environmental signals.
 
 <p align="center">
-  <img src="/figures/GSE179640/cell_communication/all_immune/all_immune_cross_tissue_enrichment.png" width="400">
-</p> 
-
-<p align="center">
-  <img src="/figures/GSE179640/cell_communication/sen_dys/sen_dys_cross_tissue_enrichment.png" width="400">
+  <img src="/figures/GSE179640/cell_communication/all_immune/all_immune_cross_tissue_enrichment.png" width="48%">
+  <img src="/figures/GSE179640/cell_communication/sen_dys/sen_dys_cross_tissue_enrichment.png" width="48%">
 </p>
 
 ## 9. Spatial Organization
@@ -183,10 +173,10 @@ When senescent and dysfunctional immune cells are compared with the broader immu
 ### Immune Cell States
 Next, I wanted to explore the immune architecture within endometrial lesions. In this analysis, I included 2 peritoneal lesions from two different patients. First, immune states were mapped within the tissues based on immune abundance per spot. Then the dominate cell type of each spot was determined via genetic signatures. Then overall immune abundance per spot was mapped onto the tissues.
 
-<p align="left">
-  <img src="figures/spatial/immune_architecture/08_BEME_346_spatial_architecture.png" width="400">
-</p> <p align="right">
-  <img src="figures/spatial/immune_architecture/08_BEME_355G_spatial_architecture.png" width="400">
+
+<p align="center">
+  <img src="figures/spatial/immune_architecture/08_BEME_346_spatial_architecture.png" width="48%">
+  <img src="figures/spatial/immune_architecture/08_BEME_355G_spatial_architecture.png" width="48%">
 </p>
 
 <p align="center">
@@ -210,7 +200,7 @@ However, I did observe tissue level differences in SEN scores across the two tis
 Next, I used CellCharter to investigate cellular niches within the tissues to see if there was any shared architecture between the two. [32] The two sections resolved into distinct immune niche compositions/architectures this suggests substantial spatial heterogeneity between lesions. BEME346 was split into 2 large niches with effector immune cells representing a large section within the middle (orange) surrounded buy an immune cold area (light blue). There was also a smaller section at the bottom of the tissue that was immune depleted. BEME355G had richer immune niches. Overall, the architecture comprised of an immune hotspot which was rich in diverse immune cell types, surrounded by lymphoid rich and  diffuse immune niches, and adaptive and lymphoid rich areas at the outer edges of the tissue section. Lastly, there was a larger section of immune-depleted spots on the edge of the tissue, which may be enriched with other cell types (i.e. stromal, epithelial) that are outside the scope of this analysis.
 
 <p align="center">
-  <img src="figures/spatial/immunosenescence/09_spatial_regions_senescence.png" width="800">
+  <img src="figures/spatial/immunosenescence/09_spatial_senescence_scores.png" width="800">
 </p>
 <p align="center">
   <img src="figures/spatial/immunosenescence/09_spatial_dysfunction_scores.png" width="800">
