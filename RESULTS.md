@@ -182,11 +182,11 @@ Next, I wanted to explore the immune architecture within endometrial lesions. In
 <table>
   <tr>
     <td align="center">
-      <img src="figures/spatial/immune_architecture/08_BEME_346_spatial_architecture.png" width="48%"><br>
+      <img src="figures/spatial/immune_architecture/08_BEME_346_spatial_architecture.png" width="100%"><br>
       <b>A. BEME346</b>
     </td>
     <td align="center">
-      <img src="figures/spatial/immune_architecture/08_BEME_355G_spatial_architecture.png" width="48%"><br>
+      <img src="figures/spatial/immune_architecture/08_BEME_355G_spatial_architecture.png" width="100%"><br>
       <b>B. BEME355G</b>
     </td>
   </tr>
