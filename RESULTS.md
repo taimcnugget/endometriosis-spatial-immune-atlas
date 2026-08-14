@@ -242,6 +242,10 @@ The adaptive-enriched niche displayed a highly focused communication profile dom
   <img src="figures/spatial/niche_ccc/Adaptive-enriched_ligrec.png" width="800">
 </p>
 
+<p align="center">
+  <em>Adaptive-enriched LR interactions</em>
+</p>
+
 #### Diffuse immune
 
 The diffuse immune niche was characterized primarily by LGALS1-associated interactions, including predicted interactions with BCL2, CD69, ITGB1, PTPRC, RET, and STAT3. In contrast to the DCN-dominated adaptive-enriched niche, this profile suggests a greater contribution of immune-regulatory and cell-state-associated communication. DCN-LRP1 and IL6-DCN interactions were also present, indicating that extracellular matrix-associated communication was retained but was less dominant within this niche.
@@ -256,6 +260,10 @@ Immune hotspots were distinguished by extensive SFRP4-associated communication, 
 
 <p align="center">
   <img src="figures/spatial/niche_ccc/Immune_hotspot_ligrec.png" width="800">
+</p>
+
+<p align="center">
+  <em>Immune hotspot niche LR interactions</em>
 </p>
 
 ### Immune-cold
@@ -276,8 +284,17 @@ To determine whether altered immune states were associated with spatial communic
 <p align="center">
   <img src="figures/spatial/niche_ccc/12_senescence_vs_incoming_by_niche.png" width="800">
 </p>
+
+<p align="center">
+  <em>Incoming signals</em>
+</p>
+
 <p align="center">
   <img src="figures/spatial/niche_ccc/12_senescence_vs_outgoing_by_niche.png" width="800">
+</p>
+
+<p align="center">
+  <em>Outgoing signals</em>
 </p>
 
 ## 11. Integrated Biological Model
