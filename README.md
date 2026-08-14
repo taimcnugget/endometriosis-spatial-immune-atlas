@@ -33,47 +33,85 @@ This project is built as a modular Snakemake pipeline. Each analysis step is an 
 
 ```
 endometriosis-spatial-immune-atlas/
-├── config/
-│   └── config.yaml
-│
-├── workflow/
-│   ├── Snakefile
-│   └── rules/
-│       ├── 00_spatial_collection.smk
-│       ├── 01_data_collection.smk
-│       ├── 02_qc.smk
-│       ├── 03_integration.smk
-│       ├── 04_total_clustering.smk
-│       └── 05_immune_annotation.smk
-│
-├── scripts/
-│   ├── 01_data_collection.py
-│   ├── 02_qc.py
-│   ├── 03_integration.py
-│   ├── 04_total_clustering.py
-│   └── 05_immune_annotation.py
-│
-├── notebooks/
-│   └── 00–12 analysis notebooks
-│
-├── data/
-│   ├── raw/                 # GEO downloads; not tracked by Git
-│   └── processed/           # intermediate files; not tracked by Git
-│
-├── results/
-├── figures/
-│
-├── models/
-│
-├── .gitignore
-│
-├── envs/
-│   └── endo_env.yaml
-|
-├── .gitignore
-|
-├── RESULTS.md               # detailed biological results and interpretation
-└── README.md                # project overview and reproducibility 
+|-- README.md
+|-- RESULTS.md
+|-- config
+|   `-- config.yaml
+|-- envs
+|   |-- ccc.yaml
+|   |-- cell2location.yaml
+|   |-- cellcharter.yaml
+|   |-- single_cell.yaml
+|   `-- spatial.yaml
+|-- figures
+|   |-- GSE179640
+|   |   |-- annotation
+|   |   |-- cell_communication
+|   |   |-- clustering
+|   |   |-- immunosenescence
+|   |   |-- integration
+|   |   `-- qc
+|   |-- exploratory
+|   |   |-- integration
+|   |   `-- qc
+|   `-- spatial
+|       |-- cell2location
+|       |-- data_collection
+|       |-- immune_architecture
+|       |-- immunosenescence
+|       |-- niche_ccc
+|       `-- niche_discovery
+|-- logs
+|-- models
+|-- notebooks
+|   |-- 00_spatial_data_collection.ipynb
+|   |-- 01_sc_data_collection.ipynb
+|   |-- 02_sc_quality_control.ipynb
+|   |-- 03_sc_integration.ipynb
+|   |-- 04_sc_clustering.ipynb
+|   |-- 05_sc_immune_annotation.ipynb
+|   |-- 06_sc_immunosenescence.ipynb
+|   |-- 07_spatial_cell2location.ipynb
+|   |-- 08_spatial_immune_architecture.ipynb
+|   |-- 09_spatial_immunosenescence.ipynb
+|   |-- 10_spatial_niche_discovery.ipynb
+|   |-- 11_sc_ccc.ipynb
+|   `-- 12_spatial_niche_ccc.ipynb
+|-- results
+|   |-- GSE179640
+|   |   |-- annotation
+|   |   |-- cell_communication
+|   |   |-- clustering
+|   |   |-- immunosenescence
+|   |   `-- qc
+|   `-- spatial
+|       |-- immune_architecture
+|       |-- immunosenescence
+|       |-- niche_ccc
+|       `-- niche_discovery
+|-- scripts
+|   |-- 01_data_collection.py
+|   |-- 02_qc.py
+|   |-- 03_integration.py
+|   |-- 04_total_clustering.py
+|   |-- 05_immune_annotation.py
+|   `-- metadata_gse179640.py
+`-- workflow
+    |-- Snakefile
+    `-- rules
+        |-- 00_spatial_collection.smk
+        |-- 01_data_collection.smk
+        |-- 02_qc.smk
+        |-- 03_integration.smk
+        |-- 04_total_clustering.smk
+        |-- 05_immune_annotation.smk
+        |-- 06_immunosenescence.smk
+        |-- 07_cell2location.smk
+        |-- 08_spatial_architecture.smk
+        |-- 09_spatial_immunosenescence.smk
+        |-- 10_niche_discovery.smk
+        |-- 11_single_cell_ccc.smk
+        `-- 12_spatial_niche_ccc.smk
 ```
 
 ### DAG
