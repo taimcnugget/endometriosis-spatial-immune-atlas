@@ -147,6 +147,12 @@ Stratifying immune cells by senescence/dysfunction state revealed tissue-specifi
 
 In EuE, the SEN/DYS TRMs show strikingly stronger predicted **SPP1-associated signaling** than Other TRMs, including SPP1→CD44 and multiple integrin receptor combinations, suggesting dysfunctional macrophage signaling, as mentioned previously. Additionally, EcP also showed a substantial SPP1 program, although the contrast between states is less dramatic. Meanwhile, Ctrl has a very different TRM landscape, with prominent APOE, HLA-associated, and B2M-associated interactions. EcO is different again, with APOE/B2M-associated signaling prominent in the displayed Other population. 
 
+
+<p align="center">
+  <img src="/figures/GSE179640/cell_communication/sen_dys/Ctrl_sen_dys_TRM_dotplot.png" width="48%">
+  <img src="/figures/GSE179640/cell_communication/sen_dys/EuE_sen_dys_TRM_dotplot.png" width="48%">
+</p>
+
 <p align="center">
   <img src="/figures/GSE179640/cell_communication/sen_dys/EcO_sen_dys_TRM_dotplot.png" width="48%">
   <img src="/figures/GSE179640/cell_communication/sen_dys/EcP_sen_dys_TRM_dotplot.png" width="48%">
@@ -164,8 +170,8 @@ In EuE and Ctrl especially, S100A8/9→ITGB2, CD68, CD36, and TLR4 interactions 
 When senescent and dysfunctional immune cells are compared with the broader immune-cell population, many of the same core immune and cell-surface processes remain enriched. However, SEN/DYS-associated ligand–receptor genes show prominent enrichment for response-to-stimulus pathways across the endometrial tissues, with greater gene overlap than in control tissue. This suggests that senescent and dysfunctional immune cells may participate in a communication state characterized by altered responsiveness to environmental signals.
 
 <p align="center">
-  <img src="/figures/GSE179640/cell_communication/all_immune/all_immune_cross_tissue_enrichment.png" width="48%">
-  <img src="/figures/GSE179640/cell_communication/sen_dys/sen_dys_cross_tissue_enrichment.png" width="48%">
+  <img src="/figures/GSE179640/cell_communication/all_immune/all_immune_cross_tissue_enrichment.png" width="50%">
+  <img src="/figures/GSE179640/cell_communication/sen_dys/sen_dys_cross_tissue_enrichment.png" width="50%">
 </p>
 
 ## 9. Spatial Organization
