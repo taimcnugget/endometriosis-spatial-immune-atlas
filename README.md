@@ -248,4 +248,4 @@ For v2 of this project I would like to:
 
 Tailynn Y. McCarty, PhD
 Biomedical Engineering | Computational Immunology | Systems Biology  
-[LinkedIn](www.linkedin.com/in/tailynn)
+[LinkedIn](https://linkedin.com/in/tailynn)
